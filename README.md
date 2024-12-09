@@ -2,6 +2,8 @@
 ![Docker](https://github.com/f1tenth/f1tenth_gym/actions/workflows/docker.yml/badge.svg)
 # The F1TENTH Gym environment
 
+This is a fork of the F1TENTH Gym environment. Installation instructions differ due to fork. 
+
 This is the repository of the F1TENTH Gym environment.
 
 This project is still under heavy developement.
@@ -14,7 +16,7 @@ We recommend installing the simulation inside a virtualenv. You can install the 
 ```bash
 virtualenv gym_env
 source gym_env/bin/activate
-git clone https://github.com/f1tenth/f1tenth_gym.git
+git clone https://github.com/isinmert/f1tenth_gym.git
 cd f1tenth_gym
 pip install -e .
 ```
