@@ -167,8 +167,8 @@ def create_track():
     track_poly = shp.Polygon(track_xy)
     track_xy_offset_in = track_poly.buffer(WIDTH)
     track_xy_offset_out = track_poly.buffer(-WIDTH)
-    track_xy_offset_in_np = np.array(track_xy_offset_in.exterior)
-    track_xy_offset_out_np = np.array(track_xy_offset_out.exterior)
+    track_xy_offset_in_np = np.array(track_xy_offset_in.exterior.coords)
+    track_xy_offset_out_np = np.array(track_xy_offset_out.exterior.coords)
     return track_xy, track_xy_offset_in_np, track_xy_offset_out_np
 
 
@@ -177,6 +177,7 @@ def convert_track(track, track_int, track_ext, iter):
     # converts track to image and saves the centerline as waypoints
     fig, ax = plt.subplots()
     fig.set_size_inches(20, 20)
+    import pdb; pdb.set_trace()
     ax.plot(*track_int.T, color='black', linewidth=3)
     ax.plot(*track_ext.T, color='black', linewidth=3)
     plt.tight_layout()
